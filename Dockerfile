@@ -5,8 +5,9 @@ FROM kalilinux/kali-rolling:latest
 ENV DEBIAN_FRONTEND=noninteractive
 
 # 更新系统并安装网络工具
-RUN apt-get update && apt-get upgrade -y \
-    && apt-get install -y \
+RUN apt-get update \
+    && apt-get upgrade -y \
+    && apt-get install --no-install-recommends -y \
     net-tools \
     iproute2 \
     iputils-ping \
@@ -23,7 +24,9 @@ RUN apt-get update && apt-get upgrade -y \
     netcat \
     git \
     vim \
-    && apt-get clean
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
 
 # 设置默认工作目录
 WORKDIR /root
