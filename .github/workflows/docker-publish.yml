@@ -30,8 +30,8 @@ jobs:
       - name: Log in to Docker Hub with GitHub Token
         uses: docker/login-action@v2
         with:
-          username: ${{ github.actor }}  # GitHub 用户名
-          password: ${{ secrets.GITHUB_TOKEN }}  # 使用 GitHub 自动生成的 token 作为密码
+          username: ${{ secrets.DOCKERHUB_USER }} 
+          password: ${{ secrets.DOCKERHUB_TOKEN }} 
 
       - name: Build and Push Docker Image
         run: |
