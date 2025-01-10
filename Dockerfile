@@ -21,7 +21,7 @@ RUN apt-get update \
     iptables \
     ethtool \
     dnsutils \
-    netcat-traditional \  # 或者 netcat-openbsd
+    netcat-traditional \
     git \
     vim \
     && apt-get clean \
