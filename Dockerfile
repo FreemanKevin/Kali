@@ -21,11 +21,13 @@ RUN apt-get update \
     iptables \
     ethtool \
     dnsutils \
-    netcat \
+    netcat-traditional \  # 或者 netcat-openbsd
     git \
     vim \
     && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/* \
+    && apt-get install --fix-missing
+
 
 
 # 设置默认工作目录
