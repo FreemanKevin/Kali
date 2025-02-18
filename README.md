@@ -1,4 +1,4 @@
-# KaliNetBox
+# Kali
 
 A Docker image based on Kali Linux Rolling, integrating essential network testing tools for diagnostics, troubleshooting, and penetration testing.
 
