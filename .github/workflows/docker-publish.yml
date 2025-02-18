@@ -35,4 +35,4 @@ jobs:
 
       - name: Build and Push Docker Image
         run: |
-          docker buildx build --file Dockerfile --platform linux/amd64,linux/arm64 --tag freelabspace/kalinetbox:latest --push .
+          docker buildx build --file Dockerfile --platform linux/amd64,linux/arm64 --tag freelabspace/kali:latest --push .
